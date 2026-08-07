@@ -1,0 +1,25 @@
+{
+  "name": "project-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DouglasLopesDRL/Curso_Ebac_Project4_StarWars.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DouglasLopesDRL/Curso_Ebac_Project4_StarWars/issues"
+  },
+  "homepage": "https://github.com/DouglasLopesDRL/Curso_Ebac_Project4_StarWars#readme",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.102.0"
+  }
+}
