@@ -1,0 +1,59 @@
+@use 'variaveis';
+
+.hero{
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url('../images/hero_desktop.jpeg');
+    background-size: cover;
+    text-align: center;
+
+    &__content{
+        max-width: 340px;
+
+        &__branding{
+            max-width: 320px;
+            margin: 0 auto;
+            
+            img{
+                width: 70%;
+            }
+        }
+
+        .title--small{
+            margin-bottom: 20px;
+        }
+        
+        p{
+            margin-bottom: 10px;
+        }
+
+        &__ladosdaforca{
+            display: flex;
+            justify-content: space-between;
+
+            &__lado{
+                width: calc(50% - 10px);
+
+                img{
+                    max-height: 150px;
+                }
+
+                button{
+                    display: block;
+                    width: 100%;
+                    height: 40px;
+                    font-size: 16px;
+                    color: variaveis.$corTextoSecundario;
+                    background-color: #6421ff;
+                    text-transform: uppercase;
+                    border-radius: 4px;
+                    margin-top: 10px;
+                    margin-bottom: 8px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+
+}

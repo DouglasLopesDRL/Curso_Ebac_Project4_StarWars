@@ -1,5 +1,59 @@
-$corDeTeste: rgb(39, 5, 163);
+@use 'hero';
+@use 'variaveis';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//Mixins
+@mixin text($fontSize : 16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoPrincipal;
+}
+
+@mixin title($fontSize: 40px){
+    font-size: $fontSize;
+    color: variaveis.$corTextoSecundario;
+}
+
 
 body{
-    background-color: $corDeTeste;
+    background-color: variaveis.$corDeFundo;
+}
+
+.link-text{
+    @include text(18px);
+    color: variaveis.$corTextoSecundario;
+    text-decoration: underline;
+}
+
+.text--big{
+    @include text(18px);
+}
+
+.text--medium{
+    @include text();
+}
+
+.text--small{
+    @include text(12px);
+}
+
+.title--big{
+    @include title(44px);
+}
+
+.title--medium{
+    @include title();
+}
+
+.title--small{
+    @include title(28px);
+}
+
+li{
+    list-style: none;
 }
