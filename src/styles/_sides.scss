@@ -1,0 +1,35 @@
+.sides{
+    padding: 5.6vw;
+
+    h2{
+        text-align: center;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-around;
+
+        &__item{
+            text-align: center;
+            padding: 60px 44px 44px;
+
+            strong{
+                margin-top: 24px;
+                display: block;
+            }
+
+            img{
+                max-width: 300px;
+                width: 100%;
+                max-height: 460px;
+                height: 100%;
+                
+            }
+
+            
+        }
+    }
+    p{
+        text-align: center;
+    }
+}
