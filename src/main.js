@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll('[data-tab-button]');
     const tabsContainer = document.querySelectorAll('[data-tabs-id]');
+    const questions = document.querySelectorAll('[data-faq-question]');
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(btn) {
@@ -14,7 +15,18 @@ document.addEventListener("DOMContentLoaded", function() {
             btn.target.classList.add('shows__tabs__button--is-active');
         });
     }
+
+    for(let i = 0; i < questions.length; i++){
+        questions[i].addEventListener('click', closeOpenQuestion);
+    }
 });
+
+function closeOpenQuestion(element){
+    const classState = 'faq__questions__item--is-open';
+    const elementFather = element.target.parentNode;
+
+    elementFather.classList.toggle(classState);   
+}
 
 function hiddenActiveButton(){
     const buttons = document.querySelectorAll('[data-tab-button]');
