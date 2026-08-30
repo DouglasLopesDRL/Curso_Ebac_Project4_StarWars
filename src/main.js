@@ -2,7 +2,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll('[data-tab-button]');
     const tabsContainer = document.querySelectorAll('[data-tabs-id]');
     const questions = document.querySelectorAll('[data-faq-question]');
+    
+    //Comportamento do Header
+    const sectionHero = document.querySelector('.hero');
+    const heightHero = sectionHero.clientHeight;
 
+    window.addEventListener('scroll',function(){
+        const currentPosition = window.scrollY;
+
+        if(currentPosition < heightHero){
+            headerHideElemets();
+        } else{
+            headerShowElemets();
+        }
+    });
+
+    //Sessão de atrações
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(btn) {
             const tabTarget = btn.target.dataset.tabButton;
@@ -16,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    //Sessão FAQ
     for(let i = 0; i < questions.length; i++){
         questions[i].addEventListener('click', closeOpenQuestion);
     }
@@ -40,4 +56,16 @@ function hiddenTabs(){
     for (let i = 0; i < tabsContainer.length; i++) {
         tabsContainer[i].classList.remove('shows__list--is-active');
     }
+}
+
+
+//HEADER
+function headerHideElemets(){
+    const header = document.querySelector('header');
+    header.classList.add('header--is-hidden');
+}
+
+function headerShowElemets(){
+    const header = document.querySelector('header');
+    header.classList.remove('header--is-hidden');
 }
