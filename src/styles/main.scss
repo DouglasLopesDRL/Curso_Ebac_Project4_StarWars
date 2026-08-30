@@ -47,6 +47,9 @@ body{
 
 .text--big{
     @include text(18px);
+    @media (max-width: 768px){
+        @include text(15px);
+    }
 }
 
 .text--medium{
@@ -55,18 +58,30 @@ body{
 
 .text--small{
     @include text(12px);
+
 }
 
 .title--big{
     @include title(44px);
+    @media (max-width: 768px){
+        @include title(26px);
+    }
 }
 
 .title--medium{
     @include title();
+
+    @media (max-width: 768px){
+        @include title(24px);
+    }
 }
 
 .title--small{
     @include title(28px);
+
+    @media (max-width: 768px){
+        @include title(22px);
+    }
 }
 
 li{
@@ -118,6 +133,10 @@ li{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+
+    @media (max-width: 768px){
+        display: block;
+    }
 
     img{
         max-width: 100%;

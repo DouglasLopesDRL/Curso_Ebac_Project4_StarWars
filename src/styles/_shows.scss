@@ -18,6 +18,10 @@
             &--is-active{
                 border-bottom: 5px solid variaveis.$corTextoPrincipal;
             }
+
+            @media (max-width:768px){
+                font-size: 16px;
+            }
         }
     }
     
@@ -27,6 +31,10 @@
         display: none;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
+
+        @media (max-width: 764px){
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         &--is-active{
             display: grid;

@@ -7,6 +7,16 @@
     background-size: cover;
     text-align: center;
 
+    @media (max-width: 768px){
+        background-image: url('../images/hero_mobile.png');
+        padding-top: calc(50vw + 25px);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: -55px;
+        display: flex;
+        justify-content: center;
+    }
+
     .button{
         margin-top: 2vw;
         margin-bottom: 8px;
@@ -14,6 +24,10 @@
 
     &__content{
         max-width: 340px;
+        
+        @media (max-width:768px){
+            margin-top: 25px;
+        }
 
         &__branding{
             max-width: 320px;
